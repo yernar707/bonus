@@ -79,13 +79,13 @@
 						$role = $_COOKIE['user_role'];
 						if ($role == 'doctor') {
 							?>
-								<li><a href="user/doctor/specialize.php">My specialization</a></li>
+								<li><a href="doctor/specialize.php">My specialization</a></li>
 							<?php
 						}
 						if ($role == 'public_servant') {
 							?>
-								<li><a href="user/public_servant/my-records.php">My records</a></li>
-								<li><a href="user/public_servant/add-record.php">Add record</a></li>
+								<li><a href="public_servant/my-records.php">My records</a></li>
+								<li><a href="public_servant/add-record.php">Add record</a></li>
 							<?php
 						}
 					}

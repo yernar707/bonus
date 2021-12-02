@@ -38,7 +38,7 @@
 	<nav class="navbar navbar-inverse nav-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="/bonus">Beast Mode</a></li>
+				<li class="active"><a href="/">Beast Mode</a></li>
 				<?php
 					if (isset($_COOKIE['user_role'])) {
 						$role = $_COOKIE['user_role'];

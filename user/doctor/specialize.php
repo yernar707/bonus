@@ -53,7 +53,7 @@
 		<nav class="navbar navbar-inverse nav-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
-				<li><a href="/bonus">Bonus Task</a></li>
+				<li><a href="/">Bonus Task</a></li>
 				<li class="active"><a href="my-records.php">My specialization</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

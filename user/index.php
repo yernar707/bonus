@@ -73,7 +73,7 @@
 	<nav class="navbar navbar-inverse nav-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
-				<li><a href="/bonus">Bonus Task</a></li>
+				<li><a href="/">Bonus Task</a></li>
 				<?php
 					if (isset($_COOKIE['user_role'])) {
 						$role = $_COOKIE['user_role'];

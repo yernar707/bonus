@@ -3,28 +3,28 @@
 
 	if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_email']) && isset($_COOKIE['user_role'])) {
 		if ($_COOKIE['user_role'] == 'admin') {
-			header('location: /bonus/admin/');
+			header('location: /admin/');
 		} elseif ($_COOKIE['user_role'] == 'doctor' or $_COOKIE['user_role'] == 'not_verified') {
-			header('location: /bonus/');
+			header('location: /');
 		}elseif($_COOKIE['user_role'] == 'public_servant'){
 
 		} else {
 			unset($_COOKIE['user_email']);
-    		setcookie('user_email', null, -1, '/'); 
+    		setcookie('user_email', null, -1, '/');
 			unset($_COOKIE['user_name']);
-    		setcookie('user_name', null, -1, '/'); 
+    		setcookie('user_name', null, -1, '/');
 			unset($_COOKIE['user_role']);
-    		setcookie('user_role', null, -1, '/'); 
-			header('location: /bonus/');
+    		setcookie('user_role', null, -1, '/');
+			header('location: /');
 		}
 	} else {
 		unset($_COOKIE['user_email']);
-		setcookie('user_email', null, -1, '/'); 
+		setcookie('user_email', null, -1, '/');
 		unset($_COOKIE['user_name']);
-		setcookie('user_name', null, -1, '/'); 
+		setcookie('user_name', null, -1, '/');
 		unset($_COOKIE['user_role']);
-		setcookie('user_role', null, -1, '/'); 
-		header('location: /bonus/');
+		setcookie('user_role', null, -1, '/');
+		header('location: /');
 	}
 ?>
 
@@ -33,7 +33,7 @@
 <head>
 	<title>Bonus Task</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/bonus/style/style.css">
+	<link rel="stylesheet" type="text/css" href="/style/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -95,7 +95,7 @@
 				</a>
 			</div>
 		</div>
-		
+
 	</div>
 </body>
 </html>

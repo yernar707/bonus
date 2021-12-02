@@ -4,24 +4,24 @@
 	if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_email']) && isset($_COOKIE['user_role'])) {
 		if ($_COOKIE['user_role'] == 'admin') {
 		} elseif ($_COOKIE['user_role'] == 'doctor' or $_COOKIE['user_role'] == 'public_servant' or $_COOKIE['user_role'] == 'not_verified') {
-			
+
 		} else {
 			unset($_COOKIE['user_email']);
-    		setcookie('user_email', null, -1, '/'); 
+    		setcookie('user_email', null, -1, '/');
 			unset($_COOKIE['user_name']);
-    		setcookie('user_name', null, -1, '/'); 
+    		setcookie('user_name', null, -1, '/');
 			unset($_COOKIE['user_role']);
-    		setcookie('user_role', null, -1, '/'); 
-			header('location: /bonus/');
+    		setcookie('user_role', null, -1, '/');
+			header('location: /');
 		}
 	} else {
 		unset($_COOKIE['user_email']);
-		setcookie('user_email', null, -1, '/'); 
+		setcookie('user_email', null, -1, '/');
 		unset($_COOKIE['user_name']);
-		setcookie('user_name', null, -1, '/'); 
+		setcookie('user_name', null, -1, '/');
 		unset($_COOKIE['user_role']);
-		setcookie('user_role', null, -1, '/'); 
-		header('location: /bonus/');
+		setcookie('user_role', null, -1, '/');
+		header('location: /');
 	}
 	$name = "";
 	$email = $_COOKIE['user_email'];
@@ -49,7 +49,7 @@
 		Bonus Task
 	</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/bonus/style/style.css">
+	<link rel="stylesheet" type="text/css" href="/style/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
@@ -112,7 +112,7 @@
 	</nav>
 
 	<div style="width: 500px; margin: auto;">
-		
+
 		<div class="auth-form col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: 50px auto;">
 			<div class="div-title">
 				<h3>My account</h3>
@@ -148,7 +148,7 @@
 								 			}
 								 		}
 								 	}
-								} 
+								}
 							?>
 						</select>
 					</div>
@@ -160,11 +160,11 @@
 					<input id="submit" type="submit" name="signup" value="Save" >
 				</div>
 			</form>
-			
+
 		</div>
 	</div>
 
-	
+
 </body>
 <script type="text/javascript">
 	$('#phone').keyup(function(e){

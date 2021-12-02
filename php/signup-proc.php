@@ -3,24 +3,24 @@
 
 	if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_email']) && isset($_COOKIE['user_role'])) {
 		if ($_COOKIE['user_role'] == 'admin') {
-			header('location: /bonus/admin/');
+			header('location: /admin/');
 		} elseif ($_COOKIE['user_role'] == 'doctor' or $_COOKIE['user_role'] == 'public_servant' or $_COOKIE['user_role'] == 'not_verified') {
-			header('location: /bonus/');
+			header('location: /');
 		} else {
 			unset($_COOKIE['user_email']);
-    		setcookie('user_email', null, -1, '/'); 
+    		setcookie('user_email', null, -1, '/');
 			unset($_COOKIE['user_name']);
-    		setcookie('user_name', null, -1, '/'); 
+    		setcookie('user_name', null, -1, '/');
 			unset($_COOKIE['user_role']);
-    		setcookie('user_role', null, -1, '/'); 
+    		setcookie('user_role', null, -1, '/');
 		}
 	} else {
 		unset($_COOKIE['user_email']);
-		setcookie('user_email', null, -1, '/'); 
+		setcookie('user_email', null, -1, '/');
 		unset($_COOKIE['user_name']);
-		setcookie('user_name', null, -1, '/'); 
+		setcookie('user_name', null, -1, '/');
 		unset($_COOKIE['user_role']);
-		setcookie('user_role', null, -1, '/'); 
+		setcookie('user_role', null, -1, '/');
 	}
 
 	if (!$connect) {
@@ -71,7 +71,7 @@
 					?>
 						<script type="text/javascript">
 							fun1("Success!", function() {
-								document.location.replace('/bonus/login.php');
+								document.location.replace('/login.php');
 							});
 
 							function fun1(s, callback) {

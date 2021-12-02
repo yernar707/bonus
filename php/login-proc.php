@@ -3,24 +3,24 @@
 
 	if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_email']) && isset($_COOKIE['user_role'])) {
 		if ($_COOKIE['user_role'] == 'admin') {
-			header('location: /bonus/admin/');
+			header('location: /admin/');
 		} elseif ($_COOKIE['user_role'] == 'doctor' or $_COOKIE['user_role'] == 'public_servant' or $_COOKIE['user_role'] == 'not_verified') {
-			header('location: /bonus/');
+			header('location: /');
 		} else {
 			unset($_COOKIE['user_email']);
-    		setcookie('user_email', null, -1, '/'); 
+    		setcookie('user_email', null, -1, '/');
 			unset($_COOKIE['user_name']);
-    		setcookie('user_name', null, -1, '/'); 
+    		setcookie('user_name', null, -1, '/');
 			unset($_COOKIE['user_role']);
-    		setcookie('user_role', null, -1, '/'); 
+    		setcookie('user_role', null, -1, '/');
 		}
 	} else {
 		unset($_COOKIE['user_email']);
-		setcookie('user_email', null, -1, '/'); 
+		setcookie('user_email', null, -1, '/');
 		unset($_COOKIE['user_name']);
-		setcookie('user_name', null, -1, '/'); 
+		setcookie('user_name', null, -1, '/');
 		unset($_COOKIE['user_role']);
-		setcookie('user_role', null, -1, '/'); 
+		setcookie('user_role', null, -1, '/');
 	}
 
 	if (!$connect) {
@@ -42,8 +42,8 @@
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 
-		$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname 
-		FROM "dbSchema"."Users" 
+		$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname
+		FROM "dbSchema"."Users"
 		JOIN "dbSchema"."Admin"
 		ON "dbSchema"."Users".email = "dbSchema"."Admin".email
 		WHERE "dbSchema"."Users".email = \''.$email.'\' AND "dbSchema"."Users".password = \''.$password.'\'';
@@ -60,7 +60,7 @@
 				?>
 					<script type="text/javascript">
 						fun1("Hello, <?php echo $row['name'].' '.$row['surname']; ?>!", function() {
-							document.location.replace('/bonus/admin/');
+							document.location.replace('/admin/');
 						});
 
 						function fun1(s, callback) {
@@ -70,8 +70,8 @@
 					</script>
 				<?php
 			} else {
-				$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname 
-				FROM "dbSchema"."Users" 
+				$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname
+				FROM "dbSchema"."Users"
 				JOIN "dbSchema"."Doctor"
 				ON "dbSchema"."Users".email = "dbSchema"."Doctor".email
 				WHERE "dbSchema"."Users".email = \''.$email.'\' AND "dbSchema"."Users".password = \''.$password.'\'';
@@ -88,7 +88,7 @@
 						?>
 							<script type="text/javascript">
 								fun1("Hello, <?php echo $row['name'].' '.$row['surname']; ?>!", function() {
-									document.location.replace('/bonus/');
+									document.location.replace('/');
 								});
 
 								function fun1(s, callback) {
@@ -98,8 +98,8 @@
 							</script>
 						<?php
 					} else {
-						$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname 
-						FROM "dbSchema"."Users" 
+						$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname
+						FROM "dbSchema"."Users"
 						JOIN "dbSchema"."PublicServant"
 						ON "dbSchema"."Users".email = "dbSchema"."PublicServant".email
 						WHERE "dbSchema"."Users".email = \''.$email.'\' AND "dbSchema"."Users".password = \''.$password.'\'';
@@ -116,7 +116,7 @@
 								?>
 									<script type="text/javascript">
 										fun1("Hello, <?php echo $row['name'].' '.$row['surname']; ?>!", function() {
-											document.location.replace('/bonus/');
+											document.location.replace('/');
 										});
 
 										function fun1(s, callback) {
@@ -127,8 +127,8 @@
 								<?php
 							} else {
 
-								$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname 
-								FROM "dbSchema"."Users" 
+								$query = 'SELECT "dbSchema"."Users".email, "dbSchema"."Users".name, "dbSchema"."Users".surname
+								FROM "dbSchema"."Users"
 								WHERE "dbSchema"."Users".email = \''.$email.'\' AND "dbSchema"."Users".password = \''.$password.'\'';
 								$result = pg_query($connect, $query);
 
@@ -143,7 +143,7 @@
 										?>
 											<script type="text/javascript">
 												fun1("Hello, <?php echo $row['name'].' '.$row['surname']; ?>!", function() {
-													document.location.replace('/bonus/');
+													document.location.replace('/');
 												});
 
 												function fun1(s, callback) {

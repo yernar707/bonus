@@ -3,24 +3,24 @@
 
 	if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_email']) && isset($_COOKIE['user_role'])) {
 		if ($_COOKIE['user_role'] == 'admin') {
-			header('location: /bonus/admin/');
+			header('location: /admin/');
 		} elseif ($_COOKIE['user_role'] == 'doctor' or $_COOKIE['user_role'] == 'public_servant' or $_COOKIE['user_role'] == 'not_verified') {
-			
+
 		} else {
 			unset($_COOKIE['user_email']);
-    		setcookie('user_email', null, -1, '/'); 
+    		setcookie('user_email', null, -1, '/');
 			unset($_COOKIE['user_name']);
-    		setcookie('user_name', null, -1, '/'); 
+    		setcookie('user_name', null, -1, '/');
 			unset($_COOKIE['user_role']);
-    		setcookie('user_role', null, -1, '/'); 
+    		setcookie('user_role', null, -1, '/');
 		}
 	} else {
 		unset($_COOKIE['user_email']);
-		setcookie('user_email', null, -1, '/'); 
+		setcookie('user_email', null, -1, '/');
 		unset($_COOKIE['user_name']);
-		setcookie('user_name', null, -1, '/'); 
+		setcookie('user_name', null, -1, '/');
 		unset($_COOKIE['user_role']);
-		setcookie('user_role', null, -1, '/'); 
+		setcookie('user_role', null, -1, '/');
 	}
 
 ?>
@@ -147,7 +147,7 @@
 				</div>
 				<table class="stats">
 					<?php
-						$query = 'SELECT "dbSchema"."Country".cname, "dbSchema"."Country".population, SUM("dbSchema"."Record".total_patients) as tp, SUM("dbSchema"."Record".total_deaths) as td 
+						$query = 'SELECT "dbSchema"."Country".cname, "dbSchema"."Country".population, SUM("dbSchema"."Record".total_patients) as tp, SUM("dbSchema"."Record".total_deaths) as td
 									FROM "dbSchema"."Country", "dbSchema"."Record"
 									WHERE "dbSchema"."Record".cname = "dbSchema"."Country".cname
 									GROUP BY "dbSchema"."Country".cname
@@ -160,8 +160,8 @@
 									<tr>
 										<th colspan="4" style="border:none; padding-top: 50px; text-align: right;">
 											<h5>
-												<b>Country:</b> <?php echo $row['cname']; ?> 
-												--- <b>Population:</b> <?php echo $row['population']; ?> 
+												<b>Country:</b> <?php echo $row['cname']; ?>
+												--- <b>Population:</b> <?php echo $row['population']; ?>
 												--- <b>Total patients:</b> <?php echo $row['tp']; ?>
 												--- <b>Total deaths:</b> <?php echo $row['td']; ?>
 											</h5>
@@ -215,7 +215,7 @@
 					?>
 				</table>
 			</div>
-			
+
 			<div class="div-section col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="div-title">
 					<h3>doctors</h3>
@@ -283,6 +283,6 @@
 		</div>
 	</div>
 
-	
+
 </body>
 </html>

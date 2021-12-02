@@ -1,0 +1,185 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+*, span:not() {
+	font-family: Open Sans, sans-serif !important;
+	color: black;
+	letter-spacing: 1px;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #efefef;
+}
+
+h1, h2, h3, h4, h5 {
+	text-transform: uppercase;
+}
+
+.navbar {
+	border-radius: 0;
+	text-transform: uppercase;
+}
+
+.navbar-inverse {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 10px #333333aa;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #555;
+    transition: 0.3s;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #aaaaaa;
+    background-color: #eeeeeeab;
+}
+
+.navbar-right {
+	font-size: 0.95em;
+}
+
+.main-div {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.div-title {
+	width: 100%;
+	text-align: center;
+}
+
+.parent-section {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.div-section {
+	margin-bottom: 50px;
+	background: #FFFFFF;
+	padding: 20px;
+    box-shadow: 0px 0px 10px #333333aa;	
+}
+
+table {
+	width: 100%;
+}
+
+table tr th {
+	text-align: center;
+	border-bottom: solid 1px #ababab;
+}
+
+.info tr td {
+	padding: 2px 5px;
+	text-align: center;
+	border-bottom: solid 1px #f4f4f4;
+}
+
+.stats tr td {
+	text-align: right;
+}
+
+.shell {
+	height: 300px;
+}
+
+.doctor-card {
+	width: 100%;
+	text-align: center;
+	background-color: #efefef;
+	border-radius: 15px; 
+	box-shadow: 0px 0px 10px #aaaaaaef;
+}
+
+
+.inactive {
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+}
+
+.footer {
+	color: #999;
+	text-align: center;
+
+}
+
+.auth-form {
+	margin: 160px auto;
+	background: #FFFFFF;
+	padding: 20px;
+    box-shadow: 0px 0px 10px #333333aa;	
+}
+
+.auth-form div {
+	padding: 10px;
+}
+
+.auth-form div input:not([type=submit]) {
+	padding: 5px 10px;
+	border: none;
+	border-bottom: 1px solid #333;
+	line-height: 25px;
+	width: 350px;
+	letter-spacing: 1.5px;
+	background: transparent;
+}
+
+select{
+	padding: 5px 10px;
+	border: none;
+	border-bottom: 1px solid #333;
+	line-height: 25px;
+	width: 100%;
+	letter-spacing: 1.5px;
+	background: transparent;
+}
+
+.auth-form div input[type=submit] {
+	padding: 3px 15px;
+	background-color: #0f6fc5;
+    border: 1px solid #0f6fc5;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.auth-form div input[type=submit]:hover {
+	background-color: #0462b6;
+}
+
+input:focus-visible {
+	outline: none;
+}
+
+.auth-form div input[disabled] {
+	background-color: #0462b6;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.auth-form div input[disabled]:hover {
+	background-color: #0462b6;
+    cursor: default;
+    opacity: 0.6 !important;
+}
+.spec-row {
+	position: relative;
+	padding: 10px !important;
+}
+
+.remove-row {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	color: red;
+}

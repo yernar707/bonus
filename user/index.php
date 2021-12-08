@@ -88,6 +88,14 @@
 								<li><a href="public_servant/add-record.php">Add record</a></li>
 							<?php
 						}
+						if ($role == 'admin') {
+							?>
+								<li><a href="/admin/users.php">Users</a></li>
+								<li><a href="/admin/countries.php">Countries</a></li>
+								<li><a href="/admin/disease-type.php">Disease Types</a></li>
+								<li><a href="/admin/diseases.php">Diseases</a></li>
+							<?php
+						}
 					}
 
 				?>
@@ -101,7 +109,7 @@
 						<?php
 					} else {
 						?>
-							<li class="active"><a href="user/"><?php echo $_COOKIE['user_name'].'('.$_COOKIE['user_role'].')'; ?> - My cabinet</a></li>
+							<li class="active"><a href="/user/"><?php echo $_COOKIE['user_name'].'('.$_COOKIE['user_role'].')'; ?> - My cabinet</a></li>
 							<li><a href="php/logoff.php"><span class="glyphicon glyphicon-log-out"></span> Log Off</a></li>
 						<?php
 					}

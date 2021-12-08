@@ -64,7 +64,7 @@
 					} else {
 						?>
 							<li><a href="user/"><?php echo $_COOKIE['user_name'].'('.$_COOKIE['user_role'].')'; ?> - My cabinet</a></li>
-							<li><a href="php/logoff.php"><span class="glyphicon glyphicon-log-out"></span> Log Off</a></li>
+							<li><a href="/php/logoff.php"><span class="glyphicon glyphicon-log-out"></span> Log Off</a></li>
 						<?php
 					}
 
